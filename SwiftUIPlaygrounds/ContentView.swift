@@ -13,10 +13,24 @@ struct ContentView: View {
         VStack {
             Text("Hello, world!")
             Text("Hello, world!")
+            SubContent()
+        }
+        .padding()
+        .eraseToAnyView()
+    }
+
+    #if DEBUG
+    @ObservedObject var iO = injectionObserver
+    #endif
+}
+
+struct SubContent: View {
+
+    var body: some View {
+        VStack {
             Text("Hello, world!")
             Text("Hello, world!")
         }
-        .padding()
         .eraseToAnyView()
     }
 

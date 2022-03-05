@@ -13,9 +13,8 @@
 		BB72D2CE27620A000037AE43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB72D2CD27620A000037AE43 /* Preview Assets.xcassets */; };
 		BB72D2D927620A000037AE43 /* SwiftUIPlaygroundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72D2D827620A000037AE43 /* SwiftUIPlaygroundsTests.swift */; };
 		BB72D2E427620A000037AE43 /* SwiftUIPlaygroundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB72D2E327620A000037AE43 /* SwiftUIPlaygroundsUITests.swift */; };
-		BB72D2F327620A500037AE43 /* HotReloading in Frameworks */ = {isa = PBXBuildFile; productRef = BB72D2F227620A500037AE43 /* HotReloading */; };
-		BB72D2F427620A500037AE43 /* HotReloading in Embed Frameworks */ = {isa = PBXBuildFile; productRef = BB72D2F227620A500037AE43 /* HotReloading */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BB72D2F827620A6F0037AE43 /* HotSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BB72D2F727620A6F0037AE43 /* HotSwiftUI */; };
+		BBF7EABB27D37EF000229398 /* HotReloading in Frameworks */ = {isa = PBXBuildFile; productRef = BBF7EABA27D37EF000229398 /* HotReloading */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BB72D2F427620A500037AE43 /* HotReloading in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,8 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF7EABB27D37EF000229398 /* HotReloading in Frameworks */,
 				BB72D2F827620A6F0037AE43 /* HotSwiftUI in Frameworks */,
-				BB72D2F327620A500037AE43 /* HotReloading in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +170,8 @@
 			);
 			name = SwiftUIPlaygrounds;
 			packageProductDependencies = (
-				BB72D2F227620A500037AE43 /* HotReloading */,
 				BB72D2F727620A6F0037AE43 /* HotSwiftUI */,
+				BBF7EABA27D37EF000229398 /* HotReloading */,
 			);
 			productName = SwiftUIPlaygrounds;
 			productReference = BB72D2C3276209FE0037AE43 /* SwiftUIPlaygrounds.app */;
@@ -247,8 +245,8 @@
 			);
 			mainGroup = BB72D2BA276209FE0037AE43;
 			packageReferences = (
-				BB72D2F127620A500037AE43 /* XCRemoteSwiftPackageReference "HotReloading" */,
 				BB72D2F627620A6F0037AE43 /* XCRemoteSwiftPackageReference "HotSwiftUI" */,
+				BBF7EAB927D37EF000229398 /* XCRemoteSwiftPackageReference "HotReloading" */,
 			);
 			productRefGroup = BB72D2C4276209FE0037AE43 /* Products */;
 			projectDirPath = "";
@@ -480,6 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPlaygrounds/Preview Content\"";
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIPlaygrounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -637,14 +636,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BB72D2F127620A500037AE43 /* XCRemoteSwiftPackageReference "HotReloading" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnno1962/HotReloading";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.17;
-			};
-		};
 		BB72D2F627620A6F0037AE43 /* XCRemoteSwiftPackageReference "HotSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/johnno1962/HotSwiftUI";
@@ -653,18 +644,26 @@
 				minimumVersion = 1.1.2;
 			};
 		};
+		BBF7EAB927D37EF000229398 /* XCRemoteSwiftPackageReference "HotReloading" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnno1962/HotReloading";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BB72D2F227620A500037AE43 /* HotReloading */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB72D2F127620A500037AE43 /* XCRemoteSwiftPackageReference "HotReloading" */;
-			productName = HotReloading;
-		};
 		BB72D2F727620A6F0037AE43 /* HotSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BB72D2F627620A6F0037AE43 /* XCRemoteSwiftPackageReference "HotSwiftUI" */;
 			productName = HotSwiftUI;
+		};
+		BBF7EABA27D37EF000229398 /* HotReloading */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBF7EAB927D37EF000229398 /* XCRemoteSwiftPackageReference "HotReloading" */;
+			productName = HotReloading;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
